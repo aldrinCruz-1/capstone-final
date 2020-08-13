@@ -57,7 +57,7 @@ body {
 	  <a class="navbar-brand" href="#">Logo</a>
 	  <ul class="navbar-nav">
 	    <li class="nav-item">
-	    	<a class="nav-link" href="#">Home</a>
+	    	<a class="nav-link" href="<?php echo base_url('admin/dashboard');  ?>">Home</a>
 	    </li>
 	    <li class="nav-item">
 			<button class="btn btn-success dropdown-toggle" data-toggle="dropdown" style="position: absolute; right: 5px;">
