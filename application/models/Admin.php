@@ -10,7 +10,7 @@ class Admin extends CI_model
 		//row() single entry result() multiple entry
 		return $this->db->get_where('tbl_admins',$arr)->row();  
 	}
-	function showname($username)
+	public function showname($username)
 	{
 		$this->db->select('firstname , lastname');
 		$this->db->where("username", $username);
@@ -20,5 +20,11 @@ class Admin extends CI_model
 		$lname = $query->row()->lastname;
 		//$name =  $fname . $lname;
 		return $fname ." ". $lname;;
+	}
+	public function getemp()
+	{
+		$this->load->database();
+		$data = $this->db->get('tbl_emp');
+		return $data;
 	}
 }

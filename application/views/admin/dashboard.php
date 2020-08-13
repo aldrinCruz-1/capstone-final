@@ -77,11 +77,7 @@ body {
 
 	<div class="sidenav">
 	  <a href="#">Menu</a>
-	  <a href="#" data-toggle="collapse" data-target="#emp">Employees</a>
-	  <div id="emp" class="collapse">
-		<a id="empcol" href="#">+ Add</a>
-	  	<a id="empcol" href="#">* Update</a>
-	  </div>
+	  <a href="<?php echo site_url('pages/employee/get_emp'); ?>" >Employees</a>
 	  <a href="#">Settings</a>
 	  <a href="#">Logs</a>
 	</div>
