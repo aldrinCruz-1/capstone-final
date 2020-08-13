@@ -57,7 +57,7 @@ body {
 	  <a class="navbar-brand" href="#">Logo</a>
 	  <ul class="navbar-nav">
 	    <li class="nav-item">
-	    	<a class="nav-link" href="#">Home</a>
+	    	<a class="nav-link" href="<?php echo base_url('admin/dashboard');  ?>">Home</a>
 	    </li>
 	    <li class="nav-item">
 			<button class="btn btn-success dropdown-toggle" data-toggle="dropdown" style="position: absolute; right: 5px;">
@@ -77,11 +77,7 @@ body {
 
 	<div class="sidenav">
 	  <a href="#">Menu</a>
-	  <a href="#" data-toggle="collapse" data-target="#emp">Employees</a>
-	  <div id="emp" class="collapse">
-		<a id="empcol" href="#">+ Add</a>
-	  	<a id="empcol" href="#">* Update</a>
-	  </div>
+	  <a href="<?php echo site_url('pages/employee/get_emp'); ?>" >Employees</a>
 	  <a href="#">Settings</a>
 	  <a href="#">Logs</a>
 	</div>
