@@ -1,10 +1,15 @@
 <div class="container mt-3">
+	<ul class="breadcrumb" style="background: none; font-size: small;">
+	    <li class="breadcrumb-item active">View</li>
+	    <li></li>
+    </ul>
+
   	<div class="row shadow p-3 mb-5 bg-white rounded">
   		<div class="col-sm-6">
   			<input class="form-control" id="search" type="text" placeholder="Search name.." style="width: 500px;">
   		</div>
   		<div class="col-sm-6" style="text-align: right;">
-  			<button class="btn btn-success">Create</button>	
+  			<a href="<?php echo base_url('pages/employee/open_create');?>"> <button class="btn btn-success">Create</button>	</a>
   		</div>
 		<div class="col-sm-12"style="padding-top: 50px;">
 			<table class="table table-hover" >
