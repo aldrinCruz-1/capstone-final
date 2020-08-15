@@ -27,4 +27,9 @@ class Admin extends CI_model
 		$data = $this->db->get('tbl_emp');
 		return $data;
 	}
+	public function save_emp($data)
+	{
+		$this->db->insert('tbl_emp',$data);
+          return $this->db->insert_id();
+	}
 }
