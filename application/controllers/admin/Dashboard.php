@@ -17,7 +17,7 @@
 		}
 		function logout()
 		{
-			$this->session->unset_userdata('admin');
+			$this->session->session_destroy();
 			redirect('admin');
 		}
 	}

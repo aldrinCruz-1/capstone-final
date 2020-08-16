@@ -1,10 +1,17 @@
 <?php
 class Employee extends CI_Controller
 {
-	
+	function __construct() // check if logged
+		{
+			parent::__construct();
+			if (!$this->session->userdata('admin')) {
+				redirect('admin');
+			}
+			$this->load->model('Admin');
+		}
 	public function get_emp()
 	{
-		$this->load->model('Admin');
+		
 		$data['arr'] = $this->Admin->getemp();
 		$this->load->view('templates/header');
 		$this->load->view('templates/topnav');
@@ -20,7 +27,6 @@ class Employee extends CI_Controller
 	}
 	public function create_emp()
 	{
-		$this->load->model('Admin');
 		$data['emp_fname']=$this->input->post('fname');
 		$data['emp_mname']=$this->input->post('mname');
 		$data['emp_lname']=$this->input->post('lname');
@@ -34,6 +40,7 @@ class Employee extends CI_Controller
 
 		$user=$this->Admin->save_emp($data);
 		if($user>0){
+				$this->session->set_flashdata('success', 'Creating employee info successful');
 		        redirect('pages/employee/get_emp');
 		}
 		else{
