@@ -23,7 +23,7 @@ class Admin extends CI_model
 	}
 	public function getemp()
 	{
-		$this->load->database();
+		$this->db->order_by('emp_id DESC');
 		$data = $this->db->get('tbl_emp');
 		return $data;
 	}
