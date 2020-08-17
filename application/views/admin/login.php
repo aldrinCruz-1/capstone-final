@@ -26,10 +26,12 @@
 				<!--<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>-->
 				<input id="password" type="password" class="form-control" name="password" placeholder="Password">
 			</div>
+
 		</div>
 		</div>
 <!-- Modal footer -->
 		<div class="modal-footer">
+			<a href="#">Forgot password</a>
 			<div class="form-group text-center">
 				<input type="submit" name="submit" value="Login" class="btn btn-primary">
 			</div>
@@ -38,17 +40,19 @@
 	</div>
 </div>
 </form>
+<br>
 <div class="container">
   <div class="shadow p-3 mb-5 bg-white rounded">
 		<div id="clock" class="d-flex justify-content-center" >
 			<table>
 			  <tr>
-				  <td id="Hour" style="color:black;font-size:xx-large;"></td>
-				  <td id="Minut" style="color:black;font-size:xx-large;"></td>
-				  <td id="Second" style="color:black;font-size:xx-large;"></td>
+				  <td id="Hour" style="color:black;font-size:50px;"></td>
+				  <td id="Minut" style="color:black;font-size:50px;"></td>
+				  <td id="Second" style="color:black;font-size:50px;"></td>
 			  <tr>
 			</table> 
 		</div>
+		<hr>
 	<div class="d-flex p2 justify-content-center"  style="margin: 20px; display: inline-block;">
 
 		<div class="form-group" style="padding: 30px; padding-left: 0;">
@@ -79,10 +83,19 @@
 	   var curr_min = d.getMinutes();
 	   var curr_sec = d.getSeconds();
 	   if(curr_hour > 12)
-	     curr_hour = curr_hour - 12;
-	   document.getElementById('Hour').innerHTML =curr_hour+':';
-	    document.getElementById('Minut').innerHTML=curr_min+':';
-	    document.getElementById('Second').innerHTML=curr_sec;
+	    {
+	      curr_hour = curr_hour - 12;
+	   	  document.getElementById('Hour').innerHTML =curr_hour+':';
+	      document.getElementById('Minut').innerHTML=curr_min+':';
+	      document.getElementById('Second').innerHTML=curr_sec + ' PM';
+	    }
+	    else
+	    {
+	      document.getElementById('Hour').innerHTML =curr_hour+':';
+	      document.getElementById('Minut').innerHTML=curr_min+':';
+	      document.getElementById('Second').innerHTML=curr_sec + ' AM';
+	    }
+
 	 }
 	timedMsg();   
 </script>

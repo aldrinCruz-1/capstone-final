@@ -19,7 +19,7 @@ body {
   width: 150px;
   position: fixed;
   z-index: 1;
-  top: 45px;
+  top: 55px;
   left: 0;
   background-color: #007BFF;
   overflow-x: hidden;
@@ -53,11 +53,11 @@ body {
 </style>
 </head>
 <body style="height: 100%;">
-	<nav class="navbar navbar-expand-sm bg-primary navbar-dark" style="height: 40px;">
-	  <a class="navbar-brand" href="#">Logo</a>
+	<nav class="navbar navbar-expand-sm bg-primary navbar-dark" style="height: 50px;">
+	  <a class="navbar-brand" href="#">Company Name/Logo</a>
 	  <ul class="navbar-nav">
 	    <li class="nav-item">
-	    	<a class="nav-link" href="<?php echo base_url('admin/dashboard');  ?>">Home</a>
+	    	<a class="nav-link" href="<?php echo base_url('admin/dashboard');  ?>">Dashboard</a>
 	    </li>
 	    <li class="nav-item">
 			<button class="btn btn-success dropdown-toggle" data-toggle="dropdown" style="position: absolute; right: 5px;">
@@ -66,8 +66,7 @@ body {
 				?>	
 			</button>
 			<div class="dropdown-menu dropdown-menu-right">
-			    <a class="dropdown-item" href="#">Some_func</a>
-			    <a class="dropdown-item" href="#">Some_func</a>
+			    <a class="dropdown-item" href="#">Account</a>
 			    <div class="dropdown-divider"></div>
 			    <a class="dropdown-item" href="<?php echo site_url('admin/dashboard/logout');?>">Logout</a>
 			</div>
@@ -81,12 +80,12 @@ body {
 	  <a href="#">Settings</a>
 	  <a href="#">Logs</a>
 	</div>
-	
-	<div class="main">
-	  <h2>Dashboard  (Home)</h2>
+	<br>
+	<div class="main shadow p-3 mb-5 bg-white rounded " style="width: 1100px;">
+		<hr>
+	  <h2>Dashboard </h2>
 	  <p>This is the dashboard</p>
 	</div>
 
-	   
 </body>
 </html>

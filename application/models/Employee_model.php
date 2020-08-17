@@ -8,6 +8,16 @@
 		{
 			return $this->db->get_where('tbl_emp',array('emp_id'=>$id))->row();
 		}
+		public function deactivate_emp($id)
+		{
+			$this->db->where('emp_id', $id);
+			$this->db->update('tbl_emp', array('emp_status'=>0));
+		}
+		public function activate_emp($id)
+		{
+			$this->db->where('emp_id', $id);
+			$this->db->update('tbl_emp', array('emp_status'=>1));
+		}
 	}
 
 
