@@ -1,5 +1,5 @@
 
-	<nav class="navbar navbar-expand-sm bg-primary navbar-dark" style="height: 40px;">
+	<nav class="navbar navbar-expand-sm bg-primary navbar-dark" style="height: 50px;">
 	  <a class="navbar-brand" href="#">Logo</a>
 	  <ul class="navbar-nav">
 	    <li class="nav-item">

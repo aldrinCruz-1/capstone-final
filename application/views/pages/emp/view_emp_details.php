@@ -7,7 +7,23 @@
 	<div class="row shadow p-3 mb-5 bg-white rounded">
 		<div class="col-sm-6">
   			<h3><?php echo $details->emp_fname. ' '. $details->emp_mname.' '.$details->emp_lname?></h3>
-  			<hr>
+  			
+  		</div>
+  		<div class="col-sm-6">
+  			<?php
+  				if ($details->emp_status == 1) {
+  				
+  			?>
+  			<a class="btn btn-danger" href="<?php echo site_url('pages/emp/employee/deactivate_emp/'.$details->emp_id)?>" style="float: right;"> Deactivate</a>
+  			<?php
+  				}
+  				else
+  				{
+  					?>
+  					<a class="btn btn-success" href="<?php echo site_url('pages/emp/employee/activate_emp/'.$details->emp_id)?>" style="float: right;"> Activate</a>
+  					<?php
+  				}
+  			?>
   		</div>
   		<div class="col-sm-12">
   			<hr>
@@ -56,21 +72,23 @@
 		      </div>
 		      <div>
 		      	<p>
-		      	Address: <input class="form-control w-50" type="type" name="pswd" value="<?php echo $details->emp_address ;?>" ></p>
+		      	Address: <textarea class="form-control w-50" type="type" name="pswd" ><?php echo $details->emp_address ;?></textarea></p>
 		      </div>
 		    </div>
 		    <div id="menu3" class="container tab-pane fade"><br>
 		      <div>
 		      	<p>
-		      	Email: <input class="form-control w-50" type="type" name="pswd" value="<?php echo $details->emp_email ;?>" ></p>
+		      		Other information goes here!
+		      		</p> 
 		      </div>
 		      <div>
 		      	<p>
-		      	Phone: <input class="form-control w-50" type="type" name="pswd" value="<?php echo $details->emp_phone ;?>" ></p>
+		      	Some details goes here!</p>
 		      </div>
 		      <div>
 		      	<p>
-		      	Address: <input class="form-control w-50" type="type" name="pswd" value="<?php echo $details->emp_address ;?>" ></p>
+		      		Details<br> Informations <br>
+		      	</p>
 		      </div>
 		    </div>
 		  </div>

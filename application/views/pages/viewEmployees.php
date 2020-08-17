@@ -18,12 +18,32 @@
   			if ($this->session->flashdata('success')) {
   			
   		 ?>
-	  		<div class="alert alert-success" role="alert" style="width: 100%; text-align: center;">
+	  		<div class="alert alert-success" role="alert" id="myalert" style="width: 100%; text-align: center;">
 		  		<?php  
 		  			echo $this->session->flashdata('success');
 		  		?>
 	  		</div>
   		<?php  
+  			}
+  		
+  			else if ($this->session->flashdata('deactivate')) {
+  			
+  		 ?>
+	  		<div class="alert alert-success" role="alert" id="myalert" style="width: 100%; text-align: center;">
+		  		<?php  
+		  			echo $this->session->flashdata('deactivate');
+		  		?>
+	  		</div>
+  		<?php  
+  			}
+  			else if ($this->session->flashdata('activate')) {
+  				?>
+  				<div class="alert alert-success" role="alert" id="myalert" style="width: 100%; text-align: center;">
+		  		<?php  
+		  			echo $this->session->flashdata('activate');
+		  		?>
+	  		</div>
+  				<?php
   			}
   		?>
 		<div class="col-sm-12"style="padding-top: 50px;">
@@ -74,4 +94,9 @@ $(document).ready(function(){
     });
   });
 });
+
+
+    setTimeout(function() {
+        $('#myalert').fadeOut('slow');
+    }, 5000);
 </script>

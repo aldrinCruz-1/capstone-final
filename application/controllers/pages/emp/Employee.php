@@ -21,6 +21,20 @@
 			$this->load->view('templates/footer');
 
 		}
+		public function deactivate_emp($id)
+		{
+
+			$this->employee_model->deactivate_emp($id);
+			$this->session->set_flashdata('deactivate','Status changed to INACTIVE');
+			redirect('pages/employee/get_emp');
+		}
+		public function activate_emp($id)
+		{
+
+			$this->employee_model->activate_emp($id);
+			$this->session->set_flashdata('activate','Status changed to ACTIVE');
+			redirect('pages/employee/get_emp');
+		}
 
 
 
