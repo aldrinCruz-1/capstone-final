@@ -34,5 +34,11 @@
 				redirect('admin'); //redirect to admin/login/index as per in the route
 			}
 		}
+		public function forgot_page()
+		{
+			$this->load->view('templates/header');
+			$this->load->view('admin/account/forgot_password');
+			$this->load->view('templates/footer');
+		}
 	}
 ?>

@@ -2,23 +2,19 @@
 <div class="container mt-3">
 	<ul class="breadcrumb" style="background: none; font-size: small;">
 	    <li class="breadcrumb-item active">View</li>
-	    <li></li>
     </ul>
 
-  	<div class="row shadow p-3 mb-5 bg-white rounded">
+  	<div class="row shadow p-3 mb-5 bg-white rounded" style=" border: 1px solid lightgray;border-top: 4px solid skyblue;">
+
   		<div class="col-sm-6">
-  			<input class="form-control" id="search" type="text" placeholder="Search name.." style="width: 500px;">
-  			<hr>
-  		</div>
-  		<div class="col-sm-6" style="text-align: right;">
-  			<a href="<?php echo base_url('pages/employee/open_create');?>"> <button class="btn btn-success">Create</button>	</a>
+  			<h1>Employee list</h1>
   			<hr>
   		</div>
   		<?php 
   			if ($this->session->flashdata('success')) {
   			
   		 ?>
-	  		<div class="alert alert-success" role="alert" id="myalert" style="width: 100%; text-align: center;">
+	  		<div class="alert alert-success col-sm-6" role="alert" id="myalert" style="width: 100%; text-align: center;">
 		  		<?php  
 		  			echo $this->session->flashdata('success');
 		  		?>
@@ -29,7 +25,7 @@
   			else if ($this->session->flashdata('deactivate')) {
   			
   		 ?>
-	  		<div class="alert alert-success" role="alert" id="myalert" style="width: 100%; text-align: center;">
+	  		<div class="alert alert-success col-sm-6" role="alert" id="myalert" style="width: 100%; text-align: center;">
 		  		<?php  
 		  			echo $this->session->flashdata('deactivate');
 		  		?>
@@ -38,7 +34,7 @@
   			}
   			else if ($this->session->flashdata('activate')) {
   				?>
-  				<div class="alert alert-success" role="alert" id="myalert" style="width: 100%; text-align: center;">
+  				<div class="alert alert-success col-sm-6" role="alert" id="myalert" style="width: 100%; text-align: center;">
 		  		<?php  
 		  			echo $this->session->flashdata('activate');
 		  		?>
@@ -46,7 +42,18 @@
   				<?php
   			}
   		?>
-		<div class="col-sm-12"style="padding-top: 50px;">
+  		<div class="col-sm-12"></div>
+  		<div class="col-sm-6">
+  			<input class="form-control" id="search" type="text" placeholder="Search.." style="width: 500px;">
+  			
+  		</div>
+  		<div class="col-sm-6" style="text-align: right;">
+  			<a href="<?php echo base_url('admin/employee/index/open_create');?>"> <button class="btn btn-success">+Add new</button>	</a>
+  			
+  		</div>
+  		
+  		
+		<div class="col-sm-12"style="padding-top: 20px;">
 			<table class="table table-hover table-striped" >
 			    <thead>
 			      <tr>
@@ -72,7 +79,7 @@
 			     		if ($row->emp_status == 1) {echo "Active";}
 			     		else{echo "Inactive";}?></td>
 			     		<td style="text-align: center;">
-			     			<a class="btn btn-primary" href="<?php echo site_url('pages/emp/employee/view_emp_details/'.$row->emp_id)?>">View details</a>
+			     			<a class="btn btn-primary" href="<?php echo site_url('admin/employee/index/view_emp_details/'.$row->emp_id)?>">View</a>
 			     		</td>
 			     	</tr>
 			     	
@@ -81,6 +88,9 @@
 			     ?>
 			    </tbody>
 			</table>
+			<?php  
+				echo $this->pagination->create_links();
+			?>
 		</div>
 	</div>
 </div>

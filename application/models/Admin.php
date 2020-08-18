@@ -21,8 +21,14 @@ class Admin extends CI_model
 		//$name =  $fname . $lname;
 		return $fname ." ". $lname;;
 	}
-	public function getemp()
+	function countAll()
 	{
+		return $this->db->get('tbl_emp')->num_rows();
+	}
+	public function getemp($limit, $offset)
+	{
+		$this->db->limit($limit);
+		$this->db->offset($offset);
 		$this->db->order_by('emp_id DESC');
 		$data = $this->db->get('tbl_emp');
 		return $data;

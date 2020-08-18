@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-	<a class="navbar-brand" href="#">Logo</a>
+	<a class="navbar-brand" href="#">Company name</a>
 	  
 	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#mymodal" style="position: absolute; right: 5px;">Login</a>
 </nav>
@@ -31,7 +31,7 @@
 		</div>
 <!-- Modal footer -->
 		<div class="modal-footer">
-			<a href="#">Forgot password</a>
+			<a href="<?php echo site_url('admin/login/forgot_page')?>">Forgot password</a>
 			<div class="form-group text-center">
 				<input type="submit" name="submit" value="Login" class="btn btn-primary">
 			</div>
@@ -42,7 +42,7 @@
 </form>
 <br>
 <div class="container">
-  <div class="shadow p-3 mb-5 bg-white rounded">
+  <div class="shadow p-3 mb-5 bg-white rounded" style="border-top: 4px solid skyblue;">
 		<div id="clock" class="d-flex justify-content-center" >
 			<table>
 			  <tr>
@@ -55,10 +55,10 @@
 		<hr>
 	<div class="d-flex p2 justify-content-center"  style="margin: 20px; display: inline-block;">
 
-		<div class="form-group" style="padding: 30px; padding-left: 0;">
+		<div class="form-group col-sm-6" style="padding: 30px; ">
 			<img src="<?php echo asset_url().'img/emp.jpg'?>" class="rounded-circle" alt="employee img">
 		</div>
-		<div class="form-group" style="padding: 30px;">
+		<div class="form-group col-sm-6" style="padding: 30px;">
 			<br>
 			<br>
 			<h5>Employee name: </h5>

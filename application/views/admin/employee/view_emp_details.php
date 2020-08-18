@@ -1,10 +1,10 @@
 <div class="container w-75">
 	<ul class="breadcrumb" style="background: none; font-size: small;">
-	    <li class="breadcrumb-item "><a href="<?php echo site_url('pages/employee/get_emp'); ?>">View</a></li>
+	    <li class="breadcrumb-item "><a href="<?php echo site_url('admin/employee/index'); ?>">View</a></li>
 	    <li class="breadcrumb-item active"><?php echo $details->emp_fname. ' '. $details->emp_lname ?></li>
-	    <li></li>
+	    
     </ul>
-	<div class="row shadow p-3 mb-5 bg-white rounded">
+	<div class="row shadow p-3 mb-5 bg-white rounded" style="border-top: 4px solid skyblue;">
 		<div class="col-sm-6">
   			<h3><?php echo $details->emp_fname. ' '. $details->emp_mname.' '.$details->emp_lname?></h3>
   			
@@ -14,16 +14,17 @@
   				if ($details->emp_status == 1) {
   				
   			?>
-  			<a class="btn btn-danger" href="<?php echo site_url('pages/emp/employee/deactivate_emp/'.$details->emp_id)?>" style="float: right;"> Deactivate</a>
+  			<a class="btn btn-danger" href="<?php echo site_url('admin/employee/index/deactivate_emp/'.$details->emp_id)?>" style="float: right;"> Deactivate</a>
   			<?php
   				}
   				else
   				{
   					?>
-  					<a class="btn btn-success" href="<?php echo site_url('pages/emp/employee/activate_emp/'.$details->emp_id)?>" style="float: right;"> Activate</a>
+  					<a class="btn btn-success" href="<?php echo site_url('admin/employee/index/activate_emp/'.$details->emp_id)?>" style="float: right;"> Activate</a>
   					<?php
   				}
   			?>
+
   		</div>
   		<div class="col-sm-12">
   			<hr>
@@ -41,7 +42,8 @@
 		    <li class="nav-item">
 		      <a class="nav-link" data-toggle="tab" href="#menu3">Others</a>
 		    </li>
-		  </ul>
+		  </ul> 	
+
 
 		  <!-- Tab panes -->
 		  <div class="tab-content">
