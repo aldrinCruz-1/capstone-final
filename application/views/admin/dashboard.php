@@ -56,7 +56,7 @@ body {
 	<nav class="navbar navbar-expand-sm bg-primary navbar-dark" style="height: 50px;">
 	  <a class="navbar-brand" href="#">Company Name/Logo</a>
 	  <ul class="navbar-nav">
-	    <li class="nav-item">
+	    <li class="nav-item active">
 	    	<a class="nav-link" href="<?php echo base_url('admin/dashboard');  ?>">Dashboard</a>
 	    </li>
 	    <li class="nav-item">
@@ -76,12 +76,12 @@ body {
 
 	<div class="sidenav">
 	  <a href="#">Menu</a>
-	  <a href="<?php echo site_url('pages/employee/get_emp'); ?>" >Employees</a>
+	  <a href="<?php echo site_url('admin/employee/index')?>" >Employees</a>
 	  <a href="#">Settings</a>
 	  <a href="#">Logs</a>
 	</div>
 	<br>
-	<div class="main shadow p-3 mb-5 bg-white rounded " style="width: 1100px;">
+	<div class="main shadow p-3 mb-5 bg-white rounded " style="width: 1100px; border: 1px solid lightgray;border-top: 4px solid skyblue;">
 		<hr>
 	  <h2>Dashboard </h2>
 	  <p>This is the dashboard</p>

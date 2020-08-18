@@ -1,16 +1,17 @@
-<div class="container">
+<div class="container mt-3">
 	<ul class="breadcrumb" style="background: none; font-size: small;">
-	    <li class="breadcrumb-item"><a href="<?php echo site_url('pages/employee/get_emp'); ?>">View</a></li>
+	    <li class="breadcrumb-item"><a href="<?php echo site_url('admin/employee/index'); ?>">View</a></li>
 	    <li class="breadcrumb-item active">Create</li>
     </ul>
 
-  	<div class="row shadow p-3 mb-5 bg-white rounded">
-	<form id="regForm" method="POST" action="<?php echo site_url('pages/employee/create_emp')?>">
-
+  	<div class="row shadow p-1 mb-5 bg-white rounded" style=" border: 1px solid lightgray; border-top: 4px solid skyblue;">
+	
+	<form id="regForm" method="POST" action="<?php echo site_url('admin/employee/index/create_emp')?>">
 	<h1>Register:</h1>
+	<hr>
 
 	<!-- One "tab" for each step in the form: -->
-	<div class="tab">Name:
+	<div class="tab"><h4>Name:</h4>
 	  <p><input name="fname" placeholder="First name..." oninput="this.className = ''"></p>
 	  <p><input name="mname" placeholder="Middle name..." oninput="this.className = ''"></p>
 	  <p><input name="lname" placeholder="Last name..." oninput="this.className = ''"></p>
@@ -23,14 +24,14 @@
 	  </p>
 	</div>
 
-	<div class="tab">Contact Info:
+	<div class="tab"><h4>Contact Info:</h4>
 	  <p><input name="email" placeholder="E-mail..." oninput="this.className = ''"></p>
 	  <p><input name="phone" placeholder="Phone..." oninput="this.className = ''"></p>
 	  Address Info:
 	  <p><input name="address" placeholder="Address..." oninput="this.className = ''"></p>
 	</div>
 
-	<div class="tab"><h6>Schedule:</h6>
+	<div class="tab"><h4>Schedule:</h4>
 	  Time in:
 	  <p><input name="timein"  type="time" placeholder="dd" oninput="this.className = ''"></p>
 	  Time out:
@@ -38,7 +39,7 @@
 	  
 	</div>
 
-	<div class="tab"><h6>Password:</h6>
+	<div class="tab"><h4>Password:</h4>
 	  <p><input name="pass" type="password" placeholder="Password..." oninput="this.className = ''"></p>
 	  <p><input type="password" placeholder="Confirm Password..." oninput="this.className = ''"></p>
 	</div>

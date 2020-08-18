@@ -3,7 +3,7 @@
 	  <a class="navbar-brand" href="#">Logo</a>
 	  <ul class="navbar-nav">
 	    <li class="nav-item">
-	    	<a class="nav-link" href="<?php echo base_url('admin/dashboard');  ?>">Home</a>
+	    	<a class="nav-link" href="<?php echo base_url('admin/dashboard');  ?>">Dashboard</a>
 	    </li>
 	    <li class="nav-item">
 			<button class="btn btn-success dropdown-toggle" data-toggle="dropdown" style="position: absolute; right: 5px;">
@@ -12,8 +12,8 @@
 				?>	
 			</button>
 			<div class="dropdown-menu dropdown-menu-right">
-			    <a class="dropdown-item" href="#">Some_func</a>
-			    <a class="dropdown-item" href="#">Some_func</a>
+
+			    <a class="dropdown-item" href="#">Acount</a>
 			    <div class="dropdown-divider"></div>
 			    <a class="dropdown-item" href="<?php echo site_url('admin/dashboard/logout');?>">Logout</a>
 			</div>
