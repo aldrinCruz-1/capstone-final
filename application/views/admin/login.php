@@ -31,7 +31,7 @@
 		</div>
 <!-- Modal footer -->
 		<div class="modal-footer">
-			<a href="<?php echo site_url('admin/login/forgot_page')?>">Forgot password</a>
+			<a href="<?php echo site_url('admin/login/forgot_password')?>">Forgot password</a>
 			<div class="form-group text-center">
 				<input type="submit" name="submit" value="Login" class="btn btn-primary">
 			</div>

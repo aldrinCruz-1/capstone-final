@@ -48,7 +48,7 @@
   			
   		</div>
   		<div class="col-sm-6" style="text-align: right;">
-  			<a href="<?php echo base_url('admin/employee/index/open_create');?>"> <button class="btn btn-success">+Add new</button>	</a>
+  			<a href="<?php echo base_url('admin/employee/index/open_create');?>"> <button class="btn btn-success">+ Add new</button>	</a>
   			
   		</div>
   		

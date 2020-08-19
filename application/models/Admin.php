@@ -38,4 +38,19 @@ class Admin extends CI_model
 		$this->db->insert('tbl_emp',$data);
           return $this->db->insert_id();
 	}
+	public function confirmemail($email)
+	{
+		$arr['email'] = $email;
+		return $this->db->get_where('tbl_admins',$arr)->row();  
+	}
+	public function updatepass($code,$email)
+	{
+		
+        $data = [
+            'password' => md5($code),
+        ];
+        $this->db->where('email', $email);
+       return $this->db->update('tbl_admins', $data);
+
+	}
 }
