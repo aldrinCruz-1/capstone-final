@@ -7,7 +7,7 @@
 		function __construct() // check if logged
 		{
 			parent::__construct();
-			if ($this->session->userdata('admin')) {
+			if ($this->session->userdata($newdata['logged_in'] = TRUE)) {
 				redirect('admin/dashboard');
 			}
 		}
@@ -25,8 +25,7 @@
 			if($check)
 			{
 				$result = $this->admin->showname($_POST['username']);
-				$this->session->set_userdata('admin', $result);
-
+				$this->session->set_userdata('admin', $result->username);
 				redirect('admin/dashboard');
 			}
 			else
@@ -82,6 +81,7 @@
 		        $mailContent = "<h1>Reset Password</h1>
 		            <p>Password has been reset.</p><br><p>This is your new password: ". $newpass."</p>";
 		        $mail->Body = $mailContent;
+		        
 		        
 		        if($mail->send())
 		        {

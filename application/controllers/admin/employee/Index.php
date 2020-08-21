@@ -13,9 +13,10 @@
 		public function index($offset = 0)
 		{
 			$this->load->library('pagination');
+			
 			$config['base_url'] = site_url('admin/employee/index/index');
 			$config['total_rows'] = $this->Admin->countAll(); 
-			$config['per_page'] =5;
+			$config['per_page'] = 5;
 			$this->pagination->initialize($config);
 			$data['arr'] = $this->Admin->getemp($config['per_page'],$offset);
 			$this->load->view('templates/header');
@@ -45,7 +46,7 @@
 
 			$user=$this->Admin->save_emp($data);
 			if($user>0){
-					$this->session->set_flashdata('success', 'Creating employee info successful');
+					$this->session->set_flashdata('success', 'Creating successful');
 			        redirect('admin/employee/index');
 			}
 			else{
@@ -65,14 +66,14 @@
 		{
 
 			$this->employee_model->deactivate_emp($id);
-			$this->session->set_flashdata('deactivate','Status changed to INACTIVE');
+			$this->session->set_flashdata('deactivate','Status is set to INACTIVE');
 			redirect('admin/employee/index');
 		}
 		public function activate_emp($id)
 		{
 
 			$this->employee_model->activate_emp($id);
-			$this->session->set_flashdata('activate','Status changed to ACTIVE');
+			$this->session->set_flashdata('activate','Status is set to ACTIVE');
 			redirect('admin/employee/index');
 		}
 		

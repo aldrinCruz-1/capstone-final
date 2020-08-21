@@ -1,3 +1,5 @@
+
+
 <div class="container mt-3">
 	<ul class="breadcrumb" style="background: none; font-size: small;">
 	    <li class="breadcrumb-item"><a href="<?php echo site_url('admin/employee/index'); ?>">View</a></li>
@@ -8,14 +10,15 @@
 	
 	<form id="regForm" method="POST" action="<?php echo site_url('admin/employee/index/create_emp')?>">
 	<h1>Register:</h1>
+	<p>Please enter all the needed information. All field under labels with asterisk(<b style="color: red;">*</b>) are <b style="color: red;">required fields</b>. </p>
 	<hr>
 
 	<!-- One "tab" for each step in the form: -->
-	<div class="tab"><h4>Name:</h4>
+	<div class="tab"><h4>Name:<b style="color: red;">*</b></h4>
 	  <p><input name="fname" placeholder="First name..." oninput="this.className = ''"></p>
 	  <p><input name="mname" placeholder="Middle name..." oninput="this.className = ''"></p>
 	  <p><input name="lname" placeholder="Last name..." oninput="this.className = ''"></p>
-	  Sex:
+	  <h4>Sex:<b style="color: red;">*</b></h4>
 	  <p><select name="sex" class="form-control" style="font-size: 17px;border: 1px solid #aaaaaa;padding: 9px;width: 100%;">
 	    <option>Male</option>
 	    <option>Female</option>
@@ -24,14 +27,14 @@
 	  </p>
 	</div>
 
-	<div class="tab"><h4>Contact Info:</h4>
+	<div class="tab"><h4>Contact Info: <b style="color: red;">*</b></h4>
 	  <p><input name="email" placeholder="E-mail..." oninput="this.className = ''"></p>
 	  <p><input name="phone" placeholder="Phone..." oninput="this.className = ''"></p>
-	  Address Info:
+	  <h4>Address Info:<b style="color: red;">*</b></h4>
 	  <p><input name="address" placeholder="Address..." oninput="this.className = ''"></p>
 	</div>
 
-	<div class="tab"><h4>Schedule:</h4>
+	<div class="tab"><h4>Schedule: <b style="color: red;">*</b></h4>
 	  Time in:
 	  <p><input name="timein"  type="time" placeholder="dd" oninput="this.className = ''"></p>
 	  Time out:
@@ -39,9 +42,10 @@
 	  
 	</div>
 
-	<div class="tab"><h4>Password:</h4>
-	  <p><input name="pass" type="password" placeholder="Password..." oninput="this.className = ''"></p>
-	  <p><input type="password" placeholder="Confirm Password..." oninput="this.className = ''"></p>
+	<div class="tab"><h4>Password:<b style="color: red;">*</b></h4>
+	  <p><input name="password" id="password" type="password" placeholder="Password..." oninput="this.className = ''"></p>
+	  <p><input name="confirm_password" id="confirm_password" type="password" placeholder="Confirm Password..." oninput="this.className = ''"></p>
+	  <span id='message'></span>
 	</div>
 
 	<div style="overflow:auto;">
@@ -63,6 +67,23 @@
 </div>
 </div>
 
+<script type="text/javascript">
+	$('#password, #confirm_password').on('keyup', function () 
+   {
+    if ($('#password').val() == $('#confirm_password').val()) 
+    {
+        $('#message').html('Password matched').css('color', 'green');
+  		$('#nextBtn').prop('disabled', false);
+  	}
+    else
+    {
+    	
+        $('#message').html('Not Match').css('color', 'red');
+        $('#nextBtn').prop('disabled', true);
+    }
+       
+  });
+</script>
 <script src="<?php echo asset_url().'js/script.js'?>"></script>
 	<!-- ================= -->
 <link rel="stylesheet" href="<?php echo asset_url().'css/styles.css'?>">

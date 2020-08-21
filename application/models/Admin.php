@@ -10,22 +10,18 @@ class Admin extends CI_model
 		//row() single entry result() multiple entry
 		return $this->db->get_where('tbl_admins',$arr)->row();  
 	}
-	public function showname($username)
+	 function showname($username)
 	{
-		$this->db->select('firstname , lastname');
+		$this->db->select('*');
 		$this->db->where("username", $username);
 		$this->db->limit(1);
-		$query = $this->db->get('tbl_admins');
-		$fname = $query->row()->firstname;
-		$lname = $query->row()->lastname;
-		//$name =  $fname . $lname;
-		return $fname ." ". $lname;;
+		return $this->db->get('tbl_admins')->row();
 	}
 	function countAll()
 	{
 		return $this->db->get('tbl_emp')->num_rows();
 	}
-	public function getemp($limit, $offset)
+	 function getemp($limit, $offset)
 	{
 		$this->db->limit($limit);
 		$this->db->offset($offset);
@@ -33,17 +29,17 @@ class Admin extends CI_model
 		$data = $this->db->get('tbl_emp');
 		return $data;
 	}
-	public function save_emp($data)
+	 function save_emp($data)
 	{
 		$this->db->insert('tbl_emp',$data);
           return $this->db->insert_id();
 	}
-	public function confirmemail($email)
+	 function confirmemail($email)
 	{
 		$arr['email'] = $email;
 		return $this->db->get_where('tbl_admins',$arr)->row();  
 	}
-	public function updatepass($code,$email)
+	 function updatepass($code,$email)
 	{
 		
         $data = [
@@ -51,6 +47,12 @@ class Admin extends CI_model
         ];
         $this->db->where('email', $email);
        return $this->db->update('tbl_admins', $data);
-
 	}
+	 function get_admin_details()
+	{
+		return $this->db->get_where('tbl_admins',array('username'=>$_SESSION['admin']))->row();
+	}
+
+
+
 }

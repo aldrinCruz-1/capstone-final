@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html style="height: 100%;">
-<head>
-	<title>Attendance</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- ================= -->
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<style>
+
+<style>
 body {
   font-family: "Lato", sans-serif;
 }
@@ -51,30 +41,8 @@ body {
 	margin-left: 20px;
 }
 </style>
-</head>
-<body style="height: 100%;">
-	<nav class="navbar navbar-expand-sm bg-primary navbar-dark" style="height: 50px;">
-	  <a class="navbar-brand" href="#">Company Name/Logo</a>
-	  <ul class="navbar-nav">
-	    <li class="nav-item active">
-	    	<a class="nav-link" href="<?php echo base_url('admin/dashboard');  ?>">Dashboard</a>
-	    </li>
-	    <li class="nav-item">
-			<button class="btn btn-success dropdown-toggle" data-toggle="dropdown" style="position: absolute; right: 5px;">
-				<?php  
-					echo $_SESSION['admin'];
-				?>	
-			</button>
-			<div class="dropdown-menu dropdown-menu-right">
-			    <a class="dropdown-item" href="#">Account</a>
-			    <div class="dropdown-divider"></div>
-			    <a class="dropdown-item" href="<?php echo site_url('admin/dashboard/logout');?>">Logout</a>
-			</div>
-		  </li>
-	  </ul>
-	</nav>
 
-	<div class="sidenav">
+<div class="sidenav">
 	  <a href="#">Menu</a>
 	  <a href="<?php echo site_url('admin/employee/index')?>" >Employees</a>
 	  <a href="#">Settings</a>
@@ -87,5 +55,3 @@ body {
 	  <p>This is the dashboard</p>
 	</div>
 
-</body>
-</html>
