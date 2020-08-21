@@ -1,4 +1,17 @@
+<style type="text/css">
+	.pagi a {
+		color: black;
+		text-decoration: none;
+		padding: 5px;
+		border: 1px solid lightgray;
+		margin-left: 20px;
+	}
+	.pagi{
+		font-size:large;
+		padding: 10px
+	}
 
+</style>
 <div class="container mt-3">
 	<ul class="breadcrumb" style="background: none; font-size: small;">
 	    <li class="breadcrumb-item active">View</li>
@@ -14,7 +27,7 @@
   			if ($this->session->flashdata('success')) {
   			
   		 ?>
-	  		<div class="alert alert-success col-sm-6" role="alert" id="myalert" style="width: 100%; text-align: center;">
+	  		<div class="alert alert-success col-sm-6" role="alert" id="myalert" style="width: 100%; text-align: center; font-size: x-large;">
 		  		<?php  
 		  			echo $this->session->flashdata('success');
 		  		?>
@@ -25,7 +38,7 @@
   			else if ($this->session->flashdata('deactivate')) {
   			
   		 ?>
-	  		<div class="alert alert-success col-sm-6" role="alert" id="myalert" style="width: 100%; text-align: center;">
+	  		<div class="alert alert-success col-sm-6" role="alert" id="myalert" style="width: 100%; text-align: center; font-size: x-large;">
 		  		<?php  
 		  			echo $this->session->flashdata('deactivate');
 		  		?>
@@ -34,7 +47,7 @@
   			}
   			else if ($this->session->flashdata('activate')) {
   				?>
-  				<div class="alert alert-success col-sm-6" role="alert" id="myalert" style="width: 100%; text-align: center;">
+  				<div class="alert alert-success col-sm-6" role="alert" id="myalert" style="width: 100%; text-align: center; font-size: x-large;">
 		  		<?php  
 		  			echo $this->session->flashdata('activate');
 		  		?>
@@ -87,10 +100,13 @@
 			     	}
 			     ?>
 			    </tbody>
-			</table>
-			<?php  
-				echo $this->pagination->create_links();
-			?>
+			</table><hr>
+			<div class="pagi" style="text-align: center;">
+				
+				<?php  
+					echo $this->pagination->create_links();
+				?>
+			</div>
 		</div>
 	</div>
 </div>

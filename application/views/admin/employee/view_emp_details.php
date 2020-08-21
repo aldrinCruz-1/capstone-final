@@ -53,14 +53,15 @@
 		    </div>
 		    <div id="menu1" class="container tab-pane fade"><br>
 		      <div>
-		      	<p><input class="form-control w-50" type="password" name="pswd" placeholder="Enter new password..."></p>
+		      	<p><input class="form-control w-50" type="password" id="password" name="password" placeholder="New password..."></p>
 		      </div>
 		      
 		      <div>
-		      	<p><input class="form-control w-50" type="password" name="pswd" placeholder="Enter confirm password..."></p>
+		      	<p><input class="form-control w-50" type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password..." ></p>
+		      	<span id='message'></span>
 		      </div>
 		      <div>
-		      	<p><input type="submit" name="btn_submit" class="btn btn-primary"></p>
+		      	<p><input type="submit" id="submitpass" name="btn_submit" class="btn btn-primary" disabled="true"></p>
 		      </div>
 		    </div>
 		    <div id="menu2" class="container tab-pane fade"><br>
@@ -75,6 +76,9 @@
 		      <div>
 		      	<p>
 		      	Address: <textarea class="form-control w-50" type="type" name="pswd" ><?php echo $details->emp_address ;?></textarea></p>
+		      </div>
+		      <div>
+		      	<p><input type="submit" id="btncontact" name="btn_submit" class="btn btn-primary" ></p>
 		      </div>
 		    </div>
 		    <div id="menu3" class="container tab-pane fade"><br>
@@ -97,3 +101,20 @@
   		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	$('#password, #confirm_password').on('keyup', function () 
+   {
+    if ($('#password').val() == $('#confirm_password').val()) 
+    {
+        $('#message').html('Password matched').css('color', 'green');
+  		$('#submitpass').prop('disabled', false);
+  	}
+    else
+    {
+    	
+        $('#message').html('Not Match').css('color', 'red');
+        $('#submitpass').prop('disabled', true);
+    }
+       
+  });
+</script>
