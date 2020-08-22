@@ -21,6 +21,7 @@
 			$data['arr'] = $this->Admin->getemp($config['per_page'],$offset);
 			$this->load->view('templates/header');
 			$this->load->view('templates/topnav');
+			$this->load->view('templates/sidenav');
 			$this->load->view('admin/employee/viewEmployees',$data);
 			$this->load->view('templates/footer');
 		}

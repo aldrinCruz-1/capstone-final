@@ -17,6 +17,7 @@
 
 			$this->load->view('templates/header');
 			$this->load->view('templates/topnav');
+			$this->load->view('templates/sidenav');
 			$this->load->view('admin/dashboard');
 			$this->load->view('templates/footer');
 		}
@@ -30,6 +31,7 @@
 		 	$result['details'] = $this->admin->get_admin_details();
 		 	$this->load->view('templates/header');
 			$this->load->view('templates/topnav');
+			$this->load->view('templates/sidenav');
 			$this->load->view('admin/account/admin_view', $result);
 			$this->load->view('templates/footer');
 		}

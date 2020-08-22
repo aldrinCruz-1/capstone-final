@@ -7,7 +7,7 @@
 		function __construct() // check if logged
 		{
 			parent::__construct();
-			if ($this->session->userdata($newdata['logged_in'] = TRUE)) {
+			if ($this->session->userdata('admin')) {
 				redirect('admin/dashboard');
 			}
 		}

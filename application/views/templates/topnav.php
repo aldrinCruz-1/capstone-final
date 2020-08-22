@@ -1,6 +1,6 @@
 
-	<nav class="navbar navbar-expand-sm bg-primary navbar-dark" style="height: 50px;">
-	  <a class="navbar-brand" href="#">Company name/Logo</a>
+	<nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top" style="height: 60px;">
+	  Company name/Logo
 	  <ul class="navbar-nav">
 	    <li class="nav-item">
 	    	<a class="nav-link" href="<?php echo base_url('admin/dashboard');  ?>">Dashboard</a>

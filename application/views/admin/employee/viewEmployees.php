@@ -12,12 +12,14 @@
 	}
 
 </style>
-<div class="container mt-3">
+<br>
+<br>
+
 	<ul class="breadcrumb" style="background: none; font-size: small;">
 	    <li class="breadcrumb-item active">View</li>
     </ul>
 
-  	<div class="row shadow p-3 mb-5 bg-white rounded" style=" border: 1px solid lightgray;border-top: 4px solid skyblue;">
+  	<div class="main row shadow p-3 mb-5 bg-white rounded" style=" border: 1px solid lightgray;border-top: 4px solid skyblue; width: 82%;">
 
   		<div class="col-sm-6">
   			<h1>Employee list</h1>
@@ -109,7 +111,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+
 .
 <script>
 $(document).ready(function(){
