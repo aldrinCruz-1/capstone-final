@@ -1,12 +1,9 @@
 
+<div class="container mt-3"><br>
+<br><br>
 
-<div class="container mt-3">
-	<ul class="breadcrumb" style="background: none; font-size: small;">
-	    <li class="breadcrumb-item"><a href="<?php echo site_url('admin/employee/index'); ?>">View</a></li>
-	    <li class="breadcrumb-item active">Create</li>
-    </ul>
 
-  	<div class="row shadow p-1 mb-5 bg-white rounded" style=" border: 1px solid lightgray; border-top: 4px solid skyblue;">
+  	<div class="row shadow p-1 mb-5 bg-white rounded" style=" border: 1px solid lightgray; border-top: 4px solid #8F8F8F;">
 	
 	<form id="regForm" method="POST" action="<?php echo site_url('admin/employee/index/create_emp')?>">
 	<h1>Register:</h1>
