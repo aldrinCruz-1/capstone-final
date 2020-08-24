@@ -1,10 +1,6 @@
+<br><br><br><br>
 <div class="container w-75">
-	<ul class="breadcrumb" style="background: none; font-size: small;">
-	    <li class="breadcrumb-item "><a href="<?php echo site_url('admin/employee/index'); ?>">View</a></li>
-	    <li class="breadcrumb-item active"><?php echo $details->emp_fname. ' '. $details->emp_lname ?></li>
-	    
-    </ul>
-	<div class="row shadow p-3 mb-5 bg-white rounded" style="border-top: 4px solid skyblue;">
+	<div class="row shadow p-3 mb-5 bg-white rounded" style="border-top: 4px solid #8F8F8F;">
 		<div class="col-sm-6">
   			<h3><?php echo $details->emp_fname. ' '. $details->emp_mname.' '.$details->emp_lname?></h3>
   			

@@ -1,12 +1,12 @@
 
-	<nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top" style="height: 60px;">
+	<nav class="navbar shadow navbar-expand-sm bg-light navbar-light fixed-top" style="height: 60px; font-size: large;">
 	  Company name/Logo
 	  <ul class="navbar-nav">
 	    <li class="nav-item">
 	    	<a class="nav-link" href="<?php echo base_url('admin/dashboard');  ?>">Dashboard</a>
 	    </li>
 	    <li class="nav-item">
-			<button class="btn btn-success dropdown-toggle" id="btnlogin" data-toggle="dropdown" style="position: absolute; right: 5px;">
+			<button class="btn btn-primary dropdown-toggle" id="btnlogin" data-toggle="dropdown" style="position: absolute; right: 5px;">
 				<?php  
 					echo $_SESSION['admin'];
 				?>	

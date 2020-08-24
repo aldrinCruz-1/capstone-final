@@ -19,7 +19,7 @@
 	    <li class="breadcrumb-item active">View</li>
     </ul>
 
-  	<div class="main row shadow p-3 mb-5 bg-white rounded" style=" border: 1px solid lightgray;border-top: 4px solid skyblue; width: 82%;">
+  	<div class="main row shadow p-3 mb-5 bg-white rounded" style=" border: 1px solid lightgray;border-top: 4px solid #8F8F8F; width: 82%;">
 
   		<div class="col-sm-6">
   			<h1>Employee list</h1>

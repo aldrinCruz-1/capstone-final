@@ -4,7 +4,7 @@
 	<a class="btn btn-info"  style="position: absolute; right: 5px;" href="<?php echo base_url('admin');  ?>">Back</a>
 </nav>
 <div class="container mt-3 ">
-	<div class="shadow p-3 mb-5 bg-white rounded w-50" style="border-top: 4px solid skyblue; margin-left: 300px;">
+	<div class="shadow p-3 mb-5 bg-white rounded w-50" style="border-top: 4px solid #8F8F8F; margin-left: 300px;">
 
 		<h2>Forgot password</h2>
 		<hr>

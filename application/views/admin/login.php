@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<nav class="navbar shadow navbar-expand-sm bg-light navbar-light">
 	<a class="navbar-brand" href="#">Company name</a>
 	  
 	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#mymodal" style="position: absolute; right: 5px;">Login</a>
@@ -42,7 +42,7 @@
 </form>
 <br>
 <div class="container">
-  <div class="shadow p-3 mb-5 bg-white rounded" style="border-top: 4px solid skyblue;">
+  <div class="shadow p-3 mb-5 bg-white rounded" style="border-top: 4px solid #8F8F8F;">
 		<div id="clock" class="d-flex justify-content-center" >
 			<table>
 			  <tr>
