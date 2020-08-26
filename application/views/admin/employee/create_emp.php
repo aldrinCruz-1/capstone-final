@@ -25,7 +25,7 @@
 	</div>
 
 	<div class="tab"><h4>Contact Info: <b style="color: red;">*</b></h4>
-	  <p><input name="email" placeholder="E-mail..." oninput="this.className = ''"></p>
+	  <p><input type="email" name="email" placeholder="Email..." oninput="this.className = ''"></p>
 	  <p><input name="phone" placeholder="Phone..." oninput="this.className = ''"></p>
 	  <h4>Address Info:<b style="color: red;">*</b></h4>
 	  <p><input name="address" placeholder="Address..." oninput="this.className = ''"></p>
@@ -41,8 +41,8 @@
 
 	<div class="tab"><h4>Password:<b style="color: red;">*</b></h4>
 	  <p><input name="password" id="password" type="password" placeholder="Password..." oninput="this.className = ''"></p>
-	  <p><input name="confirm_password" id="confirm_password" type="password" placeholder="Confirm Password..." oninput="this.className = ''"></p>
-	  <span id='message'></span>
+	 <p><input name="confirm_password" id="confirm_password" type="password" placeholder="Confirm Password..." oninput="this.className = ''"></p>
+	   <span id='message'></span>
 	</div>
 
 	<div style="overflow:auto;">
@@ -64,19 +64,19 @@
 </div>
 </div>
 
-<script type="text/javascript">
-	$('#password, #confirm_password').on('keyup', function () 
+<script>
+	$('#confirm_password').on('keyup', function () 
    {
     if ($('#password').val() == $('#confirm_password').val()) 
     {
-        $('#message').html('Password matched').css('color', 'green');
+
+        $('#message').html('&#10004 Password match...').css('color', 'green');
   		$('#nextBtn').prop('disabled', false);
   	}
     else
-    {
-    	
-        $('#message').html('Not Match').css('color', 'red');
-        $('#nextBtn').prop('disabled', true);
+    {	
+        $('#message').html('&#10006 Password does not match...').css('color', 'red');
+        $('#nextBtn').prop('disabled', true); 
     }
        
   });

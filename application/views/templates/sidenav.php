@@ -1,8 +1,4 @@
 <style>
-body {
-  font-family: "Lato", sans-serif;
-}
-
 .sidenav {
   height: 100%;
   width: 180px;
