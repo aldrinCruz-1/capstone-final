@@ -63,6 +63,10 @@
 
 	</style>
 </head>
+<style>
+body {
+  font-family: "Trebuchet MS", sans-serif;
+}</style>
 <body style="height: 100%;">
 	<div class="loader-wrapper">
 	  <div class="lds-ripple"><div></div><div></div></div>

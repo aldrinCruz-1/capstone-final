@@ -46,12 +46,17 @@
 		<div id="clock" class="d-flex justify-content-center" >
 			<table>
 			  <tr>
-				  <td id="Hour" style="color:black;font-size:50px;"></td>
-				  <td id="Minut" style="color:black;font-size:50px;"></td>
-				  <td id="Second" style="color:black;font-size:50px;"></td>
+				<td id="Hour" style="color:black;font-size:50px;"></td>
+				<td id="Minut" style="color:black;font-size:50px;"></td>
+				<td id="Second" style="color:black;font-size:50px;"></td>
 			  <tr>
-			</table> 
+			</table>			
 		</div>
+		<div class="d-flex justify-content-center" style="display: inline;">
+		  <p id="Month" style="color:black;font-size:30px; display: inline;"></p>
+		  <p id="Day" style="color:black;font-size:30px; display: inline;"></p>
+		  <p id="Year" style="color:black;font-size:30px; display: inline;"></p>
+		</div> 
 		<hr>
 	<div class="d-flex p2 justify-content-center"  style="margin: 20px; display: inline-block;">
 
@@ -95,7 +100,29 @@
 	      document.getElementById('Minut').innerHTML=curr_min+':';
 	      document.getElementById('Second').innerHTML=curr_sec + ' AM';
 	    }
-
 	 }
+
+	 Date.prototype.monthNames = [
+		    "January", "February", "March",
+		    "April", "May", "June",
+		    "July", "August", "September",
+		    "October", "November", "December"
+		];
+
+	Date.prototype.getMonthName = function() {
+		  return this.monthNames[this.getMonth()];
+	};
+	 function date()
+	 {
+
+	 	var d = new Date();
+	   var day = d.getDate();
+	   var m = d.getMonthName();
+	   var y = d.getFullYear();
+	   	  document.getElementById('Month').innerHTML = m+'&nbsp';
+	      document.getElementById('Day').innerHTML= day+',&nbsp';
+	      document.getElementById('Year').innerHTML= y;
+	 }
+	 date();
 	timedMsg();   
 </script>
